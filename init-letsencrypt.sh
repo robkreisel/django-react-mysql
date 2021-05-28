@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(boilerplate.saasitive.com www.boilerplate.saasitive.com)
+domains=(boilerplate.design1010.com www.boilerplate.design1010.com)
 rsa_key_size=4096
 data_path="./docker/nginx/certbot"
 email="" # Adding a valid address is strongly recommended
