@@ -18,14 +18,13 @@ services:
         build:
             context: .
             dockerfile: ./docker/backend/Dockerfile
-        volumes:
-            
         entrypoint: /app/docker/backend/wsgi-entrypoint.sh
         volumes:
             - .:/app
             - static_volume:/app/backend/server/django_static
         expose:
             - 8000        
-
+        env_file: 
+            - ./.env.dev
 volumes:
     static_volume: {}
