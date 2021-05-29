@@ -17,3 +17,7 @@ RUN pip install -r backend/requirements.txt
 
 ADD ./backend /app/backend
 ADD ./docker /app/docker
+
+COPY ./backend/server/entrypoint.sh .
+
+ENTRYPOINT [ "/app/entrypoint.sh" ]
