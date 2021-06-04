@@ -129,3 +129,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignoring this file so that base file (dev or prod) can be copied to it
+# and not need to be committed. 
+docker-compose.yml
