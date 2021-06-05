@@ -27,14 +27,20 @@ services:
         depends_on: 
             - db
     db:
-        image: postgres:12.0-alpine
-        volumes:
-            - postgres_data:/var/lib/postgresql/data/
+        image: mysql:5.7
+        command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        ports:
+            - 3306:3306
         environment:
-            - POSTGRES_USER=hello_django
-            - POSTGRES_PASSWORD=hello_django
-            - POSTGRES_DB=hello_django_dev
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: django
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            TZ: 'America/Chicago'
+        volumes:
+            - mysql_data:/var/lib/mysql
+            - ./backend/sql:/docker-entrypoint-initdb.d
 
 volumes:
     static_volume: {}
-    postgres_data:
+    mysql_data:
