@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON test_django.* TO 'user' @'%';
+FLUSH PRIVILEGES;
