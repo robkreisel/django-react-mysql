@@ -23,18 +23,20 @@ services:
         expose:
             - 8000        
         env_file: 
-            - ./.env.dev
+            - ./.env
         depends_on: 
             - db
     db:
-        image: postgres:12.0-alpine
+        image: mysql:5.7
+        command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        ports:
+            - 3306:3306
+        env_file:
+            - ./.db.env
         volumes:
-            - postgres_data:/var/lib/postgresql/data/
-        environment:
-            - POSTGRES_USER=hello_django
-            - POSTGRES_PASSWORD=hello_django
-            - POSTGRES_DB=hello_django_dev
+            - mysql_data:/var/lib/mysql
+            - ./backend/sql:/docker-entrypoint-initdb.d
 
 volumes:
     static_volume: {}
-    postgres_data:
+    mysql_data:

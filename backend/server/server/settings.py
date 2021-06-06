@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 from pathlib import Path
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,14 +75,14 @@ DJOSER = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-SITE_NAME = "design1010"
+
+SITE_NAME = os.environ.get("SITE_NAME")
 
 PROTOCOL = "http"
 DOMAIN = "localhost:3000"
 if not DEBUG:
     PROTOCOL = "https"
-    DOMAIN = "boilerplate.design1010.com"
-
+    DOMAIN = os.environ.get("DOMAIN")
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -119,6 +120,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
+# connect mysql
+pymysql.install_as_MySQLdb()
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
