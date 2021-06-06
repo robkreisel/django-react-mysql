@@ -1,2 +1,2 @@
-GRANT ALL PRIVILEGES ON test_django.* TO 'user' @'%';
+GRANT ALL PRIVILEGES ON django.* TO 'user' @'%';
 FLUSH PRIVILEGES;
