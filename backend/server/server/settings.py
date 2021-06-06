@@ -75,14 +75,14 @@ DJOSER = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-SITE_NAME = "design1010"
+
+SITE_NAME = os.environ.get("SITE_NAME")
 
 PROTOCOL = "http"
 DOMAIN = "localhost:3000"
 if not DEBUG:
     PROTOCOL = "https"
-    DOMAIN = "boilerplate.design1010.com"
-
+    DOMAIN = os.environ.get("DOMAIN")
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
