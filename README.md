@@ -25,4 +25,11 @@ Most of the initial build comes from Piotr Ptonski's [Django and React Tutorial]
 1. Spin up the servers `docker compose up -d`
 1. Site should be live at http://127.0.0.1 or in production at your specified URL 
 
+### Optional
+- To create a superuser for Django Admin <br/>
+`docker exec -it <backend_container_id> sh` <br/>
+`cd backend/server` <br/>
+`python manage.py createsuperuser`
+
+
 
