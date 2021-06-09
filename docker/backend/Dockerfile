@@ -12,6 +12,8 @@ RUN pip install gunicorn
 RUN pip install django-username-email
 RUN pip install -r backend/requirements.txt
 
+RUN apk add --no-cache bash
+
 ADD ./backend /app/backend
 ADD ./docker /app/docker
 
