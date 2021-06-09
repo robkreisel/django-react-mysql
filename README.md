@@ -14,7 +14,7 @@
 ## Credits
 Most of the initial build comes from Piotr Ptonski's [Django and React Tutorial](https://saasitive.com/tutorial/django-react-boilerplate-saas/). MySQL was implemented using information from Ken Kono's article [Doceker for Django(Nginx and MySQL)](https://medium.com/@kenkono/docker-for-django-nginx-and-mysql-5960a611829e)
 
-## Usage
+## Setup
 1. Clone the repo to your local host <br/>
 `git clone https://github.com/robkreisel/django-react-mysql.git app-name`
 1. Edit docker/nginx/production/default.conf and change all occurrences of boilerplate.design1010.com to your production URL
@@ -23,7 +23,13 @@ Most of the initial build comes from Piotr Ptonski's [Django and React Tutorial]
 1. Edit backend/sql/init.sql and match database and user in script
 1. Copy docker-compose-dev.yml or docker-compose-prod.yml to docker-compose.yml to avoid having to use `-f <filename>` with docker compose
 1. Spin up the servers `docker compose up -d`
-1. Site should be live at http://127.0.0.1 or in production at your specified URL 
+1. Site should be live at http://127.0.0.1 or in production at your specified URL
+
+## Run Migrations
+`docker exec -it <backend_container_id> sh` <br/>
+`cd backend/server` <br/>
+`python manage.py makemigrations`
+`python manage.py migrate`
 
 ### Optional
 - To create a superuser for Django Admin <br/>
