@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
+    'cuser',
     'corsheaders',
     #
     'apps.accounts',
@@ -137,6 +138,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'apps.accounts.models.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

@@ -9,6 +9,7 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade pip
 RUN pip install gunicorn
+RUN pip install django-username-email
 RUN pip install -r backend/requirements.txt
 
 ADD ./backend /app/backend
