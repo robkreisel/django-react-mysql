@@ -12,7 +12,9 @@
 - python-decuple for secrets
 
 ## Credits
-Most of the initial build comes from Piotr Ptonski's [Django and React Tutorial](https://saasitive.com/tutorial/django-react-boilerplate-saas/). MySQL was implemented using information from Ken Kono's article [Doceker for Django(Nginx and MySQL)](https://medium.com/@kenkono/docker-for-django-nginx-and-mysql-5960a611829e)
+- Most of the initial build comes from Piotr Ptonski's [Django and React Tutorial](https://saasitive.com/tutorial/django-react-boilerplate-saas/). 
+- MySQL was implemented using information from Ken Kono's article [Doceker for Django(Nginx and MySQL)](https://medium.com/@kenkono/docker-for-django-nginx-and-mysql-5960a611829e). 
+- [django-username-email](https://pypi.org/project/django-username-email/) 
 
 ## Setup
 1. Clone the repo to your local host <br/>
