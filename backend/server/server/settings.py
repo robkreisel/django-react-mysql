@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
+    'cuser',
     'corsheaders',
     #
     'apps.accounts',
@@ -63,7 +64,7 @@ REST_FRAMEWORK = {
 
 # configure Djoser
 DJOSER = {
-    "USER_ID_FIELD": "username",
+    "USER_ID_FIELD": "email",
     "LOGIN_FIELD": "email",
     # setting to false will bypass need for activation email for now
     "SEND_ACTIVATION_EMAIL": False,
@@ -137,6 +138,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

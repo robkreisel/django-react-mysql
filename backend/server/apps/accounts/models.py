@@ -1,4 +1,9 @@
-from django.contrib.auth.models import User
+from cuser.models import AbstractCUser
+
+
+class User(AbstractCUser):
+    pass
+
 
 User._meta.get_field('email')._unique = True
 User._meta.get_field('email').blank = False
