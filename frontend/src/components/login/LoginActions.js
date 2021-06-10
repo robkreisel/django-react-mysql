@@ -24,7 +24,6 @@ export const getCurrentUser = redirectTo => dispatch => {
     .get("/api/v1/users/me/")
     .then(response => {
       const user = {
-        username: response.data.username,
         email: response.data.email
       };
       dispatch(setCurrentUser(user, redirectTo));

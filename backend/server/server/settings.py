@@ -64,7 +64,7 @@ REST_FRAMEWORK = {
 
 # configure Djoser
 DJOSER = {
-    "USER_ID_FIELD": "username",
+    "USER_ID_FIELD": "email",
     "LOGIN_FIELD": "email",
     # setting to false will bypass need for activation email for now
     "SEND_ACTIVATION_EMAIL": False,

@@ -18,10 +18,8 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
       password: "",
       email: "",
-      usernameError: "",
       passwordError: "",
       emailError: "",
       status: ""
@@ -33,14 +31,12 @@ class Signup extends Component {
 
   onSignupClick = () => {
     this.setState({
-      usernameError: "",
       emailError: "",
       passwordError: "",
       status: ""
     });
 
     const userData = {
-      username: this.state.username,
       password: this.state.password,
       email: this.state.email
     };
@@ -53,9 +49,6 @@ class Signup extends Component {
       })
       .catch(error => {
         if (error.response) {
-          if (error.response.data.hasOwnProperty("username")) {
-            this.setState({ usernameError: error.response.data["username"] });
-          }
           if (error.response.data.hasOwnProperty("email")) {
             this.setState({ emailError: error.response.data["email"] });
           }
@@ -91,21 +84,6 @@ class Signup extends Component {
     const form = (
       <div>
         <Form>
-          <Form.Group controlId="usernameId">
-            <Form.Label>User name</Form.Label>
-            <Form.Control
-              isInvalid={this.state.usernameError}
-              type="text"
-              name="username"
-              placeholder="Enter user name"
-              value={this.state.username}
-              onChange={this.onChange}
-            />
-            <FormControl.Feedback type="invalid">
-              {this.state.usernameError}
-            </FormControl.Feedback>
-          </Form.Group>
-
           <Form.Group controlId="emailId">
             <Form.Label>Your Email</Form.Label>
             <Form.Control
