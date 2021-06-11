@@ -9,6 +9,7 @@
 - Development and production docker-compose file 
 - SSL certificate from Let's Encrypt
 - Authentication with DRF authtoken and [Djoser](https://djoser.readthedocs.io/en/latest/)
+- Custom user with username removed via django-username-email
 - python-decuple for secrets
 
 ## Credits
