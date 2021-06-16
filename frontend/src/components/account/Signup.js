@@ -68,15 +68,16 @@ class Signup extends Component {
     let errorAlert = (
       <Alert variant="danger">
         <Alert.Heading>Problem during account creation</Alert.Heading>
-        Please try again or contact service support for further help.
+        Please try again or contact support for assistance.
       </Alert>
     );
 
     let successAlert = (
       <Alert variant="success">
-        <Alert.Heading>Account created</Alert.Heading>
+        <Alert.Heading>Account pending</Alert.Heading>
         <p>
-          We send you an email with activation link. Please check your email.
+          An email has been sent to the address provided. Please click the link in the email
+          to activate your account.
         </p>
       </Alert>
     );
@@ -135,7 +136,7 @@ class Signup extends Component {
             {alert}
             {this.state.status !== "success" && form}
             <p className="mt-2">
-              Already have account? <Link to="/login">Login</Link>
+              Already have an account? <Link to="/login">Login</Link>
             </p>
           </Col>
         </Row>

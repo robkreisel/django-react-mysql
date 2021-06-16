@@ -48,8 +48,8 @@ class ResetPassword extends Component {
   render() {
     let errorAlert = (
       <Alert variant="danger">
-        <Alert.Heading>Problem during reset password email send</Alert.Heading>
-        Please try again or contact service support for further help.
+        <Alert.Heading>Problem sending password reset email</Alert.Heading>
+        Please try again or contact support for assistance.
       </Alert>
     );
 
@@ -57,11 +57,10 @@ class ResetPassword extends Component {
       <Alert variant="success">
         <Alert.Heading>Email sent </Alert.Heading>
         <p>
-          We send you an email with reset password link. Please check your
-          email.
+          An email with a password reset link has been sent.
         </p>
         <p>
-          Please try again or contact us if you do not receive it within a few
+          Please try again or contact support if you do not receive it within a few
           minutes.
         </p>
       </Alert>

@@ -32,7 +32,7 @@ class ActivateAccount extends Component {
     let errorAlert = (
       <Alert variant="danger">
         <Alert.Heading>Problem during account activation</Alert.Heading>
-        Please try again or contact service support for further help.
+        Please try again or contact support for assistance.
       </Alert>
     );
 
@@ -40,7 +40,7 @@ class ActivateAccount extends Component {
       <Alert variant="success">
         <Alert.Heading>Your account has been activated</Alert.Heading>
         <p>
-          You can <Link to="/login/">Login</Link> to your account.
+          You can <Link to="/login/">login</Link> to your account.
         </p>
       </Alert>
     );

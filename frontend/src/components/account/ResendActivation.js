@@ -49,8 +49,8 @@ class ResendActivation extends Component {
   render() {
     let errorAlert = (
       <Alert variant="danger">
-        <Alert.Heading>Problem during activation email send </Alert.Heading>
-        Please try again or contact service support for further help.
+        <Alert.Heading>Problem sending activation email</Alert.Heading>
+        Please try again or contact support for assistance.
       </Alert>
     );
 
@@ -58,10 +58,11 @@ class ResendActivation extends Component {
       <Alert variant="success">
         <Alert.Heading>Email sent </Alert.Heading>
         <p>
-          We send you an email with activation link. Please check your email.
+          Another email has been sent to the address provided. Please click the link in the email
+          to activate your account.
         </p>
         <p>
-          Please try again or contact us if you do not receive it within a few
+          Check your spam folder and contact support if you do not receive the email within a few
           minutes.
         </p>
       </Alert>
@@ -72,8 +73,8 @@ class ResendActivation extends Component {
         <Form>
           <Form.Group controlId="emailId">
             <Form.Label>
-              Your account is inactive. Please activate account by sending the
-              email with activation link.
+              Your account is inactive. Please enter your email address so an activation link can
+              be sent to you.
             </Form.Label>
             <Form.Control
               isInvalid={this.state.emailError}
