@@ -55,19 +55,19 @@ class ResetPasswordConfirm extends Component {
   render() {
     const errorAlert = (
       <Alert variant="danger">
-        <Alert.Heading>Problem during new password set </Alert.Heading>
+        <Alert.Heading>Problem setting new password</Alert.Heading>
         <p>
           Please try <Link to="/send_reset_password">reset password</Link> again
-          or contact service support for further help.
+          or contact support for assistance.
         </p>
       </Alert>
     );
 
     const successAlert = (
       <Alert variant="success">
-        <Alert.Heading>New Password Set</Alert.Heading>
+        <Alert.Heading>New password set</Alert.Heading>
         <p>
-          You can <Link to="/login/">Login</Link> to your account with new
+          You can <Link to="/login/">login</Link> to your account with your new
           password.
         </p>
       </Alert>
