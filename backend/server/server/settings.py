@@ -58,6 +58,9 @@ DJOSER = {
     'SERIALIZERS': {
         'token_create': 'apps.accounts.serializers.CustomTokenCreateSerializer',
     },
+    'EMAIL': {
+        'activation': 'apps.accounts.email.CustomActivationEmail'
+    },
 }
 
 
@@ -98,7 +101,7 @@ ROOT_URLCONF = 'server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
