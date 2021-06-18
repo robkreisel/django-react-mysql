@@ -59,7 +59,12 @@ DJOSER = {
         'token_create': 'apps.accounts.serializers.CustomTokenCreateSerializer',
     },
     'EMAIL': {
-        'activation': 'apps.accounts.email.CustomActivationEmail'
+        'activation': 'apps.accounts.email.ActivationEmail',
+        "confirmation": "djoser.email.ConfirmationEmail",
+        "password_reset": "djoser.email.PasswordResetEmail",
+        "password_changed_confirmation": "djoser.email.PasswordChangedConfirmationEmail",
+        "username_reset": "djoser.email.UsernameResetEmail",
+        "username_changed_confirmation": "djoser.email.UsernameChangedConfirmationEmail",
     },
 }
 
