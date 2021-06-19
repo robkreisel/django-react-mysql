@@ -60,11 +60,11 @@ DJOSER = {
     },
     'EMAIL': {
         'activation': 'apps.accounts.email.ActivationEmail',
-        "confirmation": "djoser.email.ConfirmationEmail",
-        "password_reset": "djoser.email.PasswordResetEmail",
-        "password_changed_confirmation": "djoser.email.PasswordChangedConfirmationEmail",
-        "username_reset": "djoser.email.UsernameResetEmail",
-        "username_changed_confirmation": "djoser.email.UsernameChangedConfirmationEmail",
+        "confirmation": "apps.accounts.email.ConfirmationEmail",
+        "password_reset": "apps.accounts.email.PasswordResetEmail",
+        "password_changed_confirmation": "apps.accounts.email.PasswordChangedConfirmationEmail",
+        "username_reset": "apps.accounts.email.UsernameResetEmail",
+        "username_changed_confirmation": "apps.accounts.email.UsernameChangedConfirmationEmail",
     },
 }
 
