@@ -59,10 +59,10 @@ class Login extends Component {
               Login
             </Button>
             <p className="mt-2">
-              Don't have account? <Link to="/signup">Signup</Link>
+              Don't have an account? <Link to="/signup">Signup</Link>
             </p>
             <p className="mt-2">
-              Forget password?{" "}
+              Forgot your password?{" "}
               <Link to="/send_reset_password">Reset Password</Link>
             </p>
           </Col>
