@@ -15,7 +15,15 @@ export const login = (userData, redirectTo) => dispatch => {
     })
     .catch(error => {
       dispatch(unsetCurrentUser());
-      toastOnError(error);
+      if (error.response.data.hasOwnProperty("email")) {
+        toast.warning("Email field required");
+      }
+      if (error.response.data.hasOwnProperty("password")) {
+        toast.warning("Passord field required");
+      }
+      if (error.response.data.hasOwnProperty("non_field_errors")) {
+        toast.error("Unable to log in with provided credentials");
+      }
     });
 };
 
