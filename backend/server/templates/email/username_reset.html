@@ -11,7 +11,7 @@
 {{ protocol }}://{{ domain }}/{{ url }}
 {% trans "Your username, in case you've forgotten:" %} {{ user.get_username }}
 
-{% trans "Thanks for using our site!" %}
+{% trans "Thank you!" %}
 
 {% blocktrans %}The {{ site_name }} team{% endblocktrans %}
 {% endblock text_body %}
@@ -23,7 +23,7 @@
 <a href="{{ protocol }}://{{ domain }}/{{ url }}">{{ protocol }}://{{ domain }}/{{ url }}</a>
 <p>{% trans "Your username, in case you've forgotten:" %} <b>{{ user.get_username }}</b></p>
 
-<p>{% trans "Thanks for using our site!" %}</p>
+<p>{% trans "Thank you!" %}</p>
 
 <p>{% blocktrans %}The {{ site_name }} team{% endblocktrans %}</p>
 {% endblock html_body %}
