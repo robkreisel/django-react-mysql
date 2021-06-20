@@ -24,7 +24,7 @@
 1. Edit docker/nginx/production/default.conf and change all occurrences of boilerplate.design1010.com to your production URL
 1. Make a copy of .env-sample called .env and edit with proper settings for dev or prod
 1. Make a copy of .db.env-sample called .db.env and edit with proper settings for dev or prod. Must match settings in .env
-1. Edit backend/sql/init.sql and match database and user in script
+1. Make a copy of backend/sql/init.sql-sample called init.sql and edit match database and user in script
 1. Copy docker-compose-dev.yml or docker-compose-prod.yml to docker-compose.yml to avoid having to use `-f <filename>` with docker compose
 1. Spin up the servers `docker compose up -d`
 1. Site should be live at http://127.0.0.1 or in production at your specified URL
